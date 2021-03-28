@@ -1,0 +1,252 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: hsl(240, 78%, 98%);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+.top-img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+}
+
+.bottom-img {
+    position: absolute;
+    width: 350px;
+    height: 300px;
+    z-index: -1;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.row {
+    margin: 1.3rem 0;
+}
+
+.wrapper-checkbox {
+    display: inline-flex;
+    align-items: center;
+}
+
+.pricing {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.pricing .block {
+    display: inherit;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.block:not(.block-2) {
+    background: white;
+    box-shadow: 0px 0px 23px 0px #ABABAD;
+    /* border-radius: 10px; */
+}
+
+.block-1 {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.block-2 {
+    background: -webkit-linear-gradient(135deg, rgb(163, 168, 240) 12%, rgb(105, 111, 221) 82%);
+    background: -moz-linear-gradient(135deg, rgb(163, 168, 240) 12%, rgb(105, 111, 221) 82%);
+    background: linear-gradient(135deg, rgb(163, 168, 240) 12%, rgb(105, 111, 221) 82%);
+    box-shadow: 0px 11px 22px -3px rgba(34, 60, 80, 0.22),
+                0px -11px 22px -3px rgba(34, 60, 80, 0.22); 
+}
+
+.block-3 {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+
+.block div, .block ul {
+    padding: 0.5em;
+}
+
+.block ul {
+    display: flex;
+    width: 70%;
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+}
+
+.block ul li {
+    padding: 1rem;
+    width: 100%;
+    text-align: center;
+    font-size: .9em;
+    font-weight: 700;
+    border-top: 1px solid rgba(211, 211, 211, 0.5);
+}
+
+.block ul li:last-child {
+    border-bottom: 1px solid rgba(211, 211, 211, 0.5);
+}
+
+.block .basic-title {
+    margin: 1em;
+}
+
+.price {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4em;
+    width: 4em;
+}
+
+.dollar {
+    margin: 0.1em;
+    font-size: .6em;
+}
+
+.more-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    margin: 2.5em 1em;
+    padding: 1.4em;
+    width: 80%;
+    height: 1rem;
+    outline: none; 
+    background: -webkit-linear-gradient(90deg, rgb(163, 168, 240), rgb(105, 111, 221));
+    background: -moz-linear-gradient(90deg, rgb(163, 168, 240), rgb(105, 111, 221));
+    background: linear-gradient(90deg, rgb(163, 168, 240), rgb(105, 111, 221));;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-size: 0.7em;
+    color: white;
+    cursor: pointer;
+    transition-duration: 1s;
+}
+
+.more-btn:not(.block-2 .more-btn):hover {
+    color: hsl(237, 63%, 64%);
+    background: transparent;
+    border: 1px solid hsl(237, 63%, 64%);
+    /* transition-duration: 1s; */
+}
+
+.more-btn:not(.block-1 .more-btn,
+.block-3 .more-btn):hover {
+    color: white;
+    background: transparent;
+    border: 1px solid white;
+
+}
+
+.block-2 .more-btn {
+    background: white;
+    color: hsl(237, 63%, 64%);
+}
+
+/* fonts */
+
+body li,
+body .heading,
+body .basic-title,
+.wrapper-checkbox span {
+    color: hsl(233, 13%, 49%);
+}
+
+.block-2,
+.block-2 ul li,
+.block-2 .basic-title {
+    color: hsl(240, 78%, 98%);
+}
+
+/* checkbox */
+
+input[type=checkbox]{
+	height: 0;
+	width: 0;
+	visibility: hidden;
+}
+
+label {
+	cursor: pointer;
+	text-indent: -9999px;
+	width: 50px;
+	height: 30px;
+	background: hsl(237, 63%, 64%);
+	display: block;
+	border-radius: 100px;
+	position: relative;
+    margin-right: .3em;
+}
+
+label:after {
+	content: '';
+	position: absolute;
+	top: 5px;
+	left: 5px;
+	width: 20px;
+	height: 20px;
+	background: #fff;
+	border-radius: 90px;
+	transition: 0.3s;
+}
+
+input:checked + label {
+	background: hsl(237, 17%, 54%);
+}
+
+input:checked + label:after {
+	left: calc(100% - 5px);
+	transform: translateX(-100%);
+}
+
+label:active:after {
+	width: 130px;
+}
+
+
+
+
+/* .block {
+    border: 1px solid red;
+} */
+/* 
+## Layout
+
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+## Colors
+
+### Primary
+
+- Linear Gradient: hsl(236, 72%, 79%) to hsl(237, 63%, 64%)
+
+### Neutral
+
+- Very Light Grayish Blue: hsl(240, 78%, 98%)
+- Light Grayish Blue: hsl(234, 14%, 74%)
+- Grayish Blue: hsl(233, 13%, 49%)
+- Dark Grayish Blue: hsl(232, 13%, 33%)
+
+## Typography
+
+### Body Copy
+
+- Font size: 15px */
