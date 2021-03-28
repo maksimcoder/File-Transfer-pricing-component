@@ -9,8 +9,6 @@ let isChecked = false;
 
 
 checkbox.addEventListener('click', () => {
-    console.log(isChecked);
-    
     if (!isChecked) {
         for (let i = 0; i < priceFields.length; i++) {
             priceFields[i].textContent = annualPrices[i];
